@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://app.netlify.com/sites/p1t1ch-fm-interactive-pricing-component/deploys">
     <img
-      src="https://api.netlify.com/api/v1/badges/289355cc-ded7-49d3-a4a9-945f60bcc799/deploy-status"
+      src="https://api.netlify.com/api/v1/badges/65ab5c8c-d501-4c65-a9da-3ee1a6d88aa1/deploy-status"
       alt="Netlify Status"
     />
   </a>
