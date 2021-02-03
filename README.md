@@ -1,4 +1,4 @@
-# Frontend Mentor: Profile card component
+# Frontend Mentor: Interactive pricing component
 
 <p align="center"><strong align="center">My solution for Frontend Mentor <a href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8">Interactive pricing component</a> challenge</strong></p>
 
