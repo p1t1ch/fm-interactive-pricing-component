@@ -24,4 +24,12 @@
   .grid-area {
     grid-area: single;
   }
+
+  .list li {
+    @apply pl-4 mb-2 last:mb-0;
+  }
+
+  .list li::marker {
+    content: url(../icons/icon-check.svg);
+  }
 }

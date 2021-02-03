@@ -1,25 +1,35 @@
 import React from 'react'
 import Seo from '@/components/Seo'
 import Pricing from '@/components/Pricing'
+import { ReactComponent as PatternCircles } from '@/icons/pattern-circles.svg'
 
 function IndexPage() {
   return (
-    <main>
+    <div className="min-h-screen px-6 py-22 grid justify-items-center">
       <Seo title="Frontend Mentor: Interactive pricing component" />
-      <h1>Simple, traffic-based pricing</h1>
-      <p>Sign-up for our 30-day trial. No credit card required.</p>
-      <article>
-        <Pricing />
-        <div>
-          <ul>
-            <li>Unlimited websites</li>
-            <li>100% data ownership</li>
-            <li>Email reports</li>
-          </ul>
-          <button>Start my trial</button>
-        </div>
-      </article>
-    </main>
+      <main className="max-w-container">
+        <section className="relative grid place-items-center mb-8 sm:mb-14 py-10 text-center sm:text-left">
+          <PatternCircles className="absolute top-0 left-1/2 transform -translate-x-1/2 -z-10" />
+          <h1 className="font-extrabold text-xl sm:text-heading text-neutral-blue-dark mb-2 sm:mb-3">
+            Simple, traffic-based pricing
+          </h1>
+          <p>Sign-up for our 30-day trial. No credit card required.</p>
+        </section>
+        <section className="bg-neutral-white rounded-2xl shadow">
+          <Pricing />
+          <div className="py-8 px-12 flex items-center flex-col sm:flex-row sm:justify-between border-t border-neutral-blue-grayish-lightest">
+            <ul className="list mb-8 sm:mb-0">
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+            <button className="bg-neutral-blue-dark text-primary-blue w-44 h-10 grid place-items-center rounded-full">
+              Start my trial
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
   )
 }
 
