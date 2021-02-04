@@ -38,7 +38,7 @@ function Pricing({ className = '', ...props }: React.HTMLProps<HTMLDivElement>) 
 
   return (
     <div className={`py-10 px-12 ${className}`} {...props}>
-      <div className="grid sm:grid-cols-2 gap-6 items-center text-center sm:text-left mb-8 sm:mb-10">
+      <div className="grid sm:grid-cols-2 gap-12 items-center text-center sm:text-left mb-12 sm:mb-14">
         <div className="uppercase tracking-widest text-xs sm:text-sm font-extrabold">
           {views >= 1000 ? `${views / 1000}M` : `${views}K`} Pageviews
         </div>
