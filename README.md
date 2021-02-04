@@ -12,3 +12,7 @@
 </p>
 
 For this challenge:
+
+1. Used marker pseudoelement for the first time
+1. Created toggle without 3rd party plugin
+1. Stylized native range slider

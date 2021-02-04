@@ -1,0 +1,36 @@
+input[type='range'] {
+  height: 0.5rem;
+  background: #ecf0fb;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: #10d8c4 url('../../icons/icon-slider.svg') no-repeat center;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 10px 25px 0 #10d8c4;
+  border: none;
+  -webkit-appearance: none;
+}
+
+input[type='range']::-moz-range-thumb {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: #10d8c4 url('../../icons/icon-slider.svg') no-repeat center;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 10px 25px 0 #10d8c4;
+  border: none;
+}
+
+input[type='range']:focus::-webkit-slider-thumb {
+  background-color: #7aeadf;
+}
+
+input[type='range']:focus::-moz-range-thumb {
+  background-color: #7aeadf;
+}
