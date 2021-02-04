@@ -38,15 +38,15 @@ function Pricing({ className = '', ...props }: React.HTMLProps<HTMLDivElement>) 
 
   return (
     <div className={`py-10 px-12 ${className}`} {...props}>
-      <div className="flex flex-wrap justify-center sm:justify-between items-center mb-8 sm:mb-10">
+      <div className="grid sm:grid-cols-2 gap-6 items-center text-center sm:text-left mb-8 sm:mb-10">
         <div className="uppercase tracking-widest text-xs sm:text-sm font-extrabold">
           {views >= 1000 ? `${views / 1000}M` : `${views}K`} Pageviews
         </div>
-        <div className="text-sm sm:text-base order-2 sm:order-none">
-          <span className="mr-2 text-neutral-blue-dark font-extrabold text-price-mobile sm:text-price tracking-tight">
+        <div className="grid grid-flow-col gap-2 items-center justify-center sm:justify-end text-sm sm:text-base order-2 sm:order-none">
+          <span className="text-neutral-blue-dark font-extrabold text-price-mobile sm:text-price tracking-tight">
             ${isEarlyBilling ? monthPrice * 12 * (DISCOUNT_SIZE / 100) : monthPrice}.00
           </span>
-          / {isEarlyBilling ? 'year' : 'month'}
+          <span>/ {isEarlyBilling ? 'year' : 'month'}</span>
         </div>
         <RangeSlider
           min={0}
@@ -54,20 +54,23 @@ function Pricing({ className = '', ...props }: React.HTMLProps<HTMLDivElement>) 
           step={1}
           value={value}
           onChange={handleRangeSliderChange}
-          className="flex-grow my-6 sm:mb-0 order-1 sm:order-none"
+          className="col-span-full order-1 sm:order-none"
         />
       </div>
-      <div className="relative flex items-center justify-center">
-        <label htmlFor="toggle" className="text-xs">
-          Monthly Billing
-        </label>
-        <Toggle checked={isEarlyBilling} onChange={handleToggleChange} className="mx-3 sm:mx-4" />
-        <label htmlFor="toggle" className="text-xs">
-          Yearly Billing
-        </label>
-        <div className="absolute top-1/2 -right-2 transform -translate-y-1/2 h-5 px-2 grid place-items-center bg-primary-red-light text-primary-red text-sale font-extrabold rounded-full">
-          <div>
-            {DISCOUNT_SIZE}% <span className="hidden sm:inline">discount</span>
+      <div className="grid place-items-center">
+        <div className="relative flex items-center justify-center">
+          <label htmlFor="toggle" className="text-xs">
+            Monthly Billing
+          </label>
+          <Toggle checked={isEarlyBilling} onChange={handleToggleChange} className="mx-3 sm:mx-4" />
+          <label htmlFor="toggle" className="text-xs">
+            Yearly Billing
+          </label>
+          <div className="absolute top-1/2 -right-1 sm:-right-2 transform -translate-y-1/2 translate-x-full h-5 px-2 grid place-items-center bg-primary-red-light text-primary-red text-sale font-extrabold rounded-full">
+            <div>
+              <span className="sm:hidden">-</span>
+              {DISCOUNT_SIZE}% <span className="hidden sm:inline">discount</span>
+            </div>
           </div>
         </div>
       </div>

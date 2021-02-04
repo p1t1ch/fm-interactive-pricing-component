@@ -5,10 +5,10 @@ import { ReactComponent as PatternCircles } from '@/icons/pattern-circles.svg'
 
 function IndexPage() {
   return (
-    <div className="min-h-screen px-6 py-22 grid justify-items-center">
+    <div className="min-h-screen px-6 py-22 grid justify-items-center bg-pattern bg-no-repeat">
       <Seo title="Frontend Mentor: Interactive pricing component" />
-      <main className="max-w-container">
-        <section className="relative grid place-items-center mb-8 sm:mb-14 py-10 text-center sm:text-left">
+      <main className="max-w-container w-full">
+        <section className="relative grid place-items-center mb-8 sm:mb-14 py-10 text-center sm:text-left z-0">
           <PatternCircles className="absolute top-0 left-1/2 transform -translate-x-1/2 -z-10" />
           <h1 className="font-extrabold text-xl sm:text-heading text-neutral-blue-dark mb-2 sm:mb-3">
             Simple, traffic-based pricing

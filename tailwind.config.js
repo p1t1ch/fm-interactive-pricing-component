@@ -43,6 +43,9 @@ module.exports = {
       padding: {
         22: '5.5rem',
       },
+      backgroundImage: {
+        pattern: 'url(../images/bg-pattern.svg)',
+      },
     },
   },
   variants: {
