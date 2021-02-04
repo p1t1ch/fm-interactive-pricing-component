@@ -5,8 +5,9 @@ module.exports = {
   theme: {
     colors: {
       primary: {
-        cyan: '#10D8C4',
-        'cyan-soft': '#A4F3EB',
+        'cyan-light': '#A4F3EB',
+        cyan: '#7AEADF',
+        'cyan-dark': '#24AEA1',
         red: '#FF8D68',
         'red-light': '#FEEDE8',
         blue: '#BECDFF',
@@ -46,11 +47,23 @@ module.exports = {
       backgroundImage: {
         pattern: 'url(../images/bg-pattern.svg)',
       },
+      width: {
+        toggle: '2.6875rem',
+        thumb: '.875rem',
+      },
+      height: {
+        toggle: '1.375rem',
+        thumb: '.875rem',
+      },
+      translate: {
+        thumb: '1.3125rem',
+      },
     },
   },
   variants: {
     extend: {
       margin: ['last'],
+      textColor: ['focus-visible'],
     },
   },
 }

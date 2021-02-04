@@ -10,6 +10,11 @@
   body {
     @apply font-semibold text-body text-neutral-blue-grayish bg-neutral-blue-pale;
   }
+
+  button:focus,
+  input:focus {
+    @apply outline-none;
+  }
 }
 
 @layer utilities {

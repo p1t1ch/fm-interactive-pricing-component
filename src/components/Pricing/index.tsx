@@ -44,7 +44,7 @@ function Pricing({ className = '', ...props }: React.HTMLProps<HTMLDivElement>) 
         </div>
         <div className="grid grid-flow-col gap-2 items-center justify-center sm:justify-end text-sm sm:text-base order-2 sm:order-none">
           <span className="text-neutral-blue-dark font-extrabold text-price-mobile sm:text-price tracking-tight">
-            ${isEarlyBilling ? monthPrice * 12 * (DISCOUNT_SIZE / 100) : monthPrice}.00
+            ${isEarlyBilling ? monthPrice * 12 * ((100 - DISCOUNT_SIZE) / 100) : monthPrice}.00
           </span>
           <span>/ {isEarlyBilling ? 'year' : 'month'}</span>
         </div>
@@ -62,7 +62,7 @@ function Pricing({ className = '', ...props }: React.HTMLProps<HTMLDivElement>) 
           <label htmlFor="toggle" className="text-xs">
             Monthly Billing
           </label>
-          <Toggle checked={isEarlyBilling} onChange={handleToggleChange} className="mx-3 sm:mx-4" />
+          <Toggle id="toggle" checked={isEarlyBilling} onChange={handleToggleChange} className="mx-3 sm:mx-4" />
           <label htmlFor="toggle" className="text-xs">
             Yearly Billing
           </label>

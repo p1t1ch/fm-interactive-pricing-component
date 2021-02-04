@@ -23,7 +23,7 @@ function IndexPage() {
               <li>100% data ownership</li>
               <li>Email reports</li>
             </ul>
-            <button className="bg-neutral-blue-dark text-primary-blue w-44 h-10 grid place-items-center rounded-full">
+            <button className="bg-neutral-blue-dark text-primary-blue hover:text-neutral-white focus-visible:text-neutral-white w-44 h-10 grid place-items-center rounded-full transition-colors">
               Start my trial
             </button>
           </div>
