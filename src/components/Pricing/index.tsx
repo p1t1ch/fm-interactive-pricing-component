@@ -37,7 +37,7 @@ function Pricing({ className = '', ...props }: React.HTMLProps<HTMLDivElement>) 
   }
 
   return (
-    <div className={`py-10 px-12 ${className}`} {...props}>
+    <div className={`pt-14 sm:pt-17 pb-22 px-12 ${className}`} {...props}>
       <div className="grid sm:grid-cols-2 gap-12 items-center text-center sm:text-left mb-12 sm:mb-14">
         <div className="uppercase tracking-widest text-xs sm:text-sm font-extrabold">
           {views >= 1000 ? `${views / 1000}M` : `${views}K`} Pageviews
@@ -48,11 +48,15 @@ function Pricing({ className = '', ...props }: React.HTMLProps<HTMLDivElement>) 
           </span>
           <span>/ {isEarlyBilling ? 'year' : 'month'}</span>
         </div>
+        <label htmlFor="range-slider" className="sr-only">
+          Change pageviews count
+        </label>
         <RangeSlider
           min={0}
           max={4}
           step={1}
           value={value}
+          id="range-slider"
           onChange={handleRangeSliderChange}
           className="col-span-full order-1 sm:order-none"
         />

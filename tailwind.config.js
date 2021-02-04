@@ -42,6 +42,7 @@ module.exports = {
         container: '33.75rem',
       },
       padding: {
+        17: '4.25rem',
         22: '5.5rem',
       },
       backgroundImage: {

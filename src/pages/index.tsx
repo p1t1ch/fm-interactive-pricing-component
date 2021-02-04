@@ -16,6 +16,7 @@ function IndexPage() {
           <p>Sign-up for our 30-day trial. No credit card required.</p>
         </section>
         <section className="bg-neutral-white rounded-2xl shadow">
+          <h2 className="sr-only">Select your pricing model</h2>
           <Pricing />
           <div className="py-8 px-12 flex items-center flex-col sm:flex-row sm:justify-between border-t border-neutral-blue-grayish-lightest">
             <ul className="list mb-8 sm:mb-0">
