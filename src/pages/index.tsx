@@ -5,7 +5,7 @@ import { ReactComponent as PatternCircles } from '@/icons/pattern-circles.svg'
 
 function IndexPage() {
   return (
-    <div className="min-h-screen px-6 py-22 grid justify-items-center bg-pattern bg-no-repeat">
+    <div className="min-h-screen px-6 pt-14 sm:pt-17 pb-22 grid justify-items-center bg-pattern bg-no-repeat">
       <Seo title="Frontend Mentor: Interactive pricing component" />
       <main className="max-w-container w-full">
         <section className="relative grid place-items-center mb-8 sm:mb-14 py-10 text-center sm:text-left z-0">
